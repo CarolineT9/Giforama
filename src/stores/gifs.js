@@ -8,12 +8,17 @@ export const useGifsStore = defineStore('gifs', () => {
     const { data } = await APIService.getTrendingGifs()
     gifs.value = data.data
   }
+  const searchGifs = async (query) => {
+    const { data } = await APIService.searchGifs(query)
+    gifs.value = data.data
+  }
   onMounted(() => {
     getGifs()
   })
   return {
     gifs,
     getGifs,
+    searchGifs,
   }
 })
 if (import.meta.hot) {
