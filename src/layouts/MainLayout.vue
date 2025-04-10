@@ -17,11 +17,11 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" elevated>
+    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" elevated class="bg-neutral-950">
       <!-- drawer content -->
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container class="bg-black">
       <router-view />
     </q-page-container>
 
