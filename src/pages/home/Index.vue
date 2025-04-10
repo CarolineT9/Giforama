@@ -1,13 +1,17 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-neutral-900 dark:to-neutral-800">
+
     <WelcomeSection />
     <GaleryGif />
+
   </div>
 </template>
 
 <script setup>
 import WelcomeSection from './WelcomeSection.vue';
 import GaleryGif from './GaleryGif.vue';
+
+
 
 </script>
 

@@ -6,7 +6,10 @@ const getTrendingGifs = async () => {
   return response
 }
 const searchGifs = (query) => api.get('/gifs/search', { params: { q: query } })
+const getCategory = async () => await api.get(`/gifs/categories?`)
+
 export default {
   getTrendingGifs,
   searchGifs,
+  getCategory,
 }
