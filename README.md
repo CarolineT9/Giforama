@@ -1,6 +1,6 @@
 # GIFORAMA
 
-Um aplicativo para explorar GIFs usando a API do Giphy, desenvolvido com Vue.js 3 e Quasar Framework.
+Um aplicativo para explorar GIFs usando a [API do Giphy](https://giphy.com) , desenvolvido com [Vue.js 3](https://vuejs.org)  e [Quasar Framework](https://quasar.dev).
 
 ## Funcionalidades
 
@@ -37,7 +37,7 @@ VITE_API_KEY=sua_chave_da_api_giphy
 VITE_API_BASE_URL=https://api.giphy.com/v1
 
 ```
-2. Obtenha uma chave de API gratuita no site do Giphy.
+2. Obtenha uma chave de API gratuita no site do [Giphy](https://giphy.com).
 ```bash
 # Modo desenvolvimento
 quasar dev
