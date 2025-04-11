@@ -5,11 +5,12 @@ import { useCategoryStore } from "src/stores/categories"
 
 const store = useCategoryStore()
 
+
 watch(() => store.selectedCategory, (newCategory) => {
   if (newCategory) {
-    store.fetchGifsByCategory(newCategory)
+    store.fetchGifsByCategory(newCategory.name || newCategory)
   }
-});
+})
 </script>
 
 <template>

@@ -3,8 +3,3 @@
       Sobre
     </q-page>
   </template>
-  
-  <script setup>
-  
-  </script>
-  

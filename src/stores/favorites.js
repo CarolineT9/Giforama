@@ -1,20 +1,36 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
-import APIService from 'src/services/APIService'
-export const useFavoritesStore = defineStore('favorites', () => {
-  const favorites = ref([])
-  const gif = ref([])
+import { ref, watch } from 'vue'
 
-  async function getGifByid(id) {
-    const { data } = await APIService.getGifById(id)
-    gif.value = data.data
+export const useFavoritesStore = defineStore('favorites', () => {
+
+  const favorites = ref([])
+  const loadFavorites = () => {
+    const saved = localStorage.getItem('favorites')
+    favorites.value = saved ? JSON.parse(saved) : []
   }
-  function addFavorite(id) {
-    getGifByid(id)
-    favorites.value.push(gif.value)
+
+  const toggleFavorite = (gif) => {
+    const index = favorites.value.findIndex(f => f.id === gif.id)
+    if (index === -1) {
+      favorites.value.push(gif) 
+    } else {
+      favorites.value.splice(index, 1) 
+    }
   }
+
+  const isFavorite = (id) => {
+    return favorites.value.some(f => f.id === id)
+  }
+
+  watch(favorites, (newVal) => {
+    localStorage.setItem('favorites', JSON.stringify(newVal))
+  }, { deep: true })
+  loadFavorites()
+  
   return {
     favorites,
-    addFavorite,
+    toggleFavorite,
+    isFavorite,
+    loadFavorites
   }
 })

@@ -9,5 +9,4 @@ const store = useFavoritesStore();
       <CardGif v-for="(gif, index) in store.favorites" :key="gif.id" :gif="gif" :delay="index * 100 + 200" />
     </div>
   </section>
-
 </template>

@@ -3,18 +3,19 @@ import { ref } from 'vue'
 import APIService from 'src/services/APIService'
 
 export const useCategoryStore = defineStore('categories', () => {
-  // Nome alterado para 'categories'
   const categories = ref([])
   const selectedCategory = ref(null)
-  const gifs = ref([]) // Alterado de gifsByCategory para gifs
+  const gifs = ref([]) 
   const isLoading = ref(false)
 
-  async function fetchGifsByCategory(categoryName = 'action') {
+  const fetchGifsByCategory = async (categoryName = 'action') => {
     isLoading.value = true
     try {
       const { data } = await APIService.searchGifs(categoryName)
       gifs.value = data.data
-      selectedCategory.value = categoryName
+      selectedCategory.value = categories.value.find(cat => 
+        cat.name.toLowerCase() === categoryName.toLowerCase()
+      ) || categoryName
     } catch (error) {
       console.error('Error fetching category GIFs:', error)
     } finally {
@@ -22,12 +23,15 @@ export const useCategoryStore = defineStore('categories', () => {
     }
   }
 
-  async function fetchCategories() {
+  const fetchCategories = async () => {
+    isLoading.value = true
     try {
       const { data } = await APIService.getCategory()
       categories.value = data.data
     } catch (error) {
       console.error('Error fetching categories:', error)
+    } finally {
+      isLoading.value = false
     }
   }
 

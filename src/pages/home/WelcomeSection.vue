@@ -16,11 +16,6 @@
     </div>
   </section>
 </template>
-
-<script setup>
-
-
-</script>
 <style>
 @keyframes float {
   0% {
