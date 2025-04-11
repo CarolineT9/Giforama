@@ -1,4 +1,4 @@
-# GIF Explorer
+# GIFORAMA
 
 Um aplicativo para explorar GIFs usando a API do Giphy, desenvolvido com Vue.js 3 e Quasar Framework.
 
