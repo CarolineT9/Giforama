@@ -19,7 +19,7 @@ Um aplicativo para explorar GIFs usando a API do Giphy, desenvolvido com Vue.js 
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/gif-explorer.git
+git clone https://github.com/CarolineT9/giforama.git
 cd gif-explorer
 ```
 2. Clone o repositório:
@@ -47,9 +47,9 @@ quasar build
 ```
 ### Ferramentas Utilizadas
 
-- Vue.js 3
-- Quasar Framework
-- Pinia (gerenciamento de estado)
-- Axios (requisições HTTP)
-- Vue Router
-- TailwindCSS
+- [Vue.js 3](https://vuejs.org)
+- [Quasar Framework](https://quasar.dev)
+- [Pinia](https://pinia.vuejs.org)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [TailWindCSS](https://tailwindcss.com)
+- [Vue Router](https://router.vuejs.org)
