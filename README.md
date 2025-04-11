@@ -1,6 +1,6 @@
 # GIFORAMA
 
-Um aplicativo para explorar GIFs usando a [API do Giphy](https://giphy.com) , desenvolvido com [Vue.js 3](https://vuejs.org)  e [Quasar Framework](https://quasar.dev).
+Um aplicativo para explorar GIFs usando a [API do Giphy](https://developers.giphy.com) , desenvolvido com [Vue.js 3](https://vuejs.org)  e [Quasar Framework](https://quasar.dev).
 
 ## Funcionalidades
 
@@ -20,7 +20,7 @@ Um aplicativo para explorar GIFs usando a [API do Giphy](https://giphy.com) , de
 1. Clone o repositório:
 ```bash
 git clone https://github.com/CarolineT9/giforama.git
-cd gif-explorer
+cd giforama
 ```
 2. Clone o repositório:
 ```bash
@@ -37,11 +37,12 @@ VITE_API_KEY=sua_chave_da_api_giphy
 VITE_API_BASE_URL=https://api.giphy.com/v1
 
 ```
-2. Obtenha uma chave de API gratuita no site do [Giphy](https://giphy.com).
+2. Obtenha uma chave de API gratuita no site do [Giphy](https://developers.giphy.com).
 ```bash
 # Modo desenvolvimento
 quasar dev
-
+# ou
+npm run dev
 # Modo produção
 quasar build
 ```
