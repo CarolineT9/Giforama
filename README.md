@@ -1,40 +1,55 @@
-# Quasar App (giforama)
+# GIF Explorer
 
-A Quasar Project
+Um aplicativo para explorar GIFs usando a API do Giphy, desenvolvido com Vue.js 3 e Quasar Framework.
 
-## Install the dependencies
+## Funcionalidades
+
+- Visualizar GIFs em tendência
+- Buscar GIFs por termo
+- Explorar por categorias
+- Salvar GIFs favoritos
+- Interface responsiva
+
+## Pré-requisitos
+
+- Node.js (versão 16 ou superior)
+- npm ou yarn
+
+## Instalação
+
+1. Clone o repositório:
 ```bash
-yarn
-# or
+git clone https://github.com/seu-usuario/gif-explorer.git
+cd gif-explorer
+```
+2. Clone o repositório:
+```bash
 npm install
+# ou
+yarn install
+
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+### Configuração
+1. Crie um arquivo .env na raiz do projeto baseado no .env.example:
+```bash VITE_API_KEY=sua_chave_da_api_giphy
+VITE_API_KEY=sua_chave_da_api_giphy
+VITE_API_BASE_URL=https://api.giphy.com/v1
+
+```
+2. Obtenha uma chave de API gratuita no site do Giphy.
 ```bash
+# Modo desenvolvimento
 quasar dev
-```
 
-
-### Lint the files
-```bash
-yarn lint
-# or
-npm run lint
-```
-
-
-### Format the files
-```bash
-yarn format
-# or
-npm run format
-```
-
-
-### Build the app for production
-```bash
+# Modo produção
 quasar build
 ```
+### Ferramentas Utilizadas
 
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+- Vue.js 3
+- Quasar Framework
+- Pinia (gerenciamento de estado)
+- Axios (requisições HTTP)
+- Vue Router
+- TailwindCSS
