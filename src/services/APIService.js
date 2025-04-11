@@ -1,4 +1,4 @@
-// src/services/APIService.js
+
 import { api } from 'boot/axios'
 
 const getTrendingGifs = async () => {

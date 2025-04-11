@@ -3,14 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
-//drawer nav
-.q-drawer{
-    .q-item{
-        opacity: 0.6;
-        &.q-router-link--exact-active{
-            background-color: rgba(107, 34, 170, 0.933);
-            font-weight: 700;
-            
-        }
+
+.q-header{
+    .q-toolbar{
+        opacity: 0.8;
+      
     }
 }

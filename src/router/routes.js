@@ -19,7 +19,7 @@ const routes = [
         },
       },
       { path: 'favorites', component: () => import('pages/favorites/Index.vue') },
-      { path: 'about', component: () => import('pages/AboutView.vue') },
+      { path: 'about', component: () => import('src/pages/about/Index.vue') },
       {
         path: 'categories',
         component: () => import('pages/categories/Index.vue'),
